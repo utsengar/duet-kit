@@ -1,0 +1,66 @@
+{
+  "name": "duet-kit",
+  "version": "0.1.0",
+  "description": "LLM-native UI toolkit - Build UIs where humans and AI edit the same validated state. Built on Zustand + Zod.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "zod": "^3.22.4",
+    "zustand": "^4.4.7"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "typescript": "^5.2.2",
+    "vitest": "^2.1.9"
+  },
+  "keywords": [
+    "llm",
+    "ai",
+    "react",
+    "zustand",
+    "zod",
+    "state-management",
+    "schema",
+    "validation",
+    "openai",
+    "anthropic",
+    "function-calling"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}
