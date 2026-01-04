@@ -10,7 +10,8 @@
  *
  * @example
  * ```typescript
- * import { createDuet, field, z } from 'duet-kit'
+ * import { z } from 'zod'
+ * import { createDuet, field } from 'duet-kit'
  *
  * const useTripStore = createDuet('TripBudget', {
  *   destination: field(z.string(), 'Destination', 'Tokyo'),
@@ -42,8 +43,6 @@ export type {
   LLMBridge,
 } from './types';
 
-// Re-export Zod for convenience
-export { z } from 'zod';
 
 // Advanced: individual building blocks (createDuet combines these)
 export { createSchema, DuetSchema } from './schema';

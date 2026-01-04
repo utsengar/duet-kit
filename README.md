@@ -18,7 +18,8 @@ You end up writing boilerplate: prompt templates, JSON parsing, validation logic
 **duet-kit** gives your Zustand store an LLM interface. One schema, two editors (human + AI), same validation rules. State changes are instant—no round-trip to a server.
 
 ```typescript
-import { createDuet, field, z } from 'duet-kit'
+import { z } from 'zod'
+import { createDuet, field } from 'duet-kit'
 
 const useFormStore = createDuet('ContactForm', {
   name: field(z.string().min(1), 'Full Name', ''),
@@ -48,17 +49,18 @@ useFormStore.llm.history()                                 // audit trail of all
 ## Install
 
 ```bash
-npm install duet-kit
+npm install duet-kit zod zustand
 ```
 
-Peer dependencies: `react`, `zustand`, `zod`
+> **Peer dependencies:** `zod` and `zustand` are required. `react` is optional (only needed for the React hook).
 
 ---
 
 ## Quick Start
 
 ```typescript
-import { createDuet, field, z } from 'duet-kit'
+import { z } from 'zod'
+import { createDuet, field } from 'duet-kit'
 
 // Define schema with nested fields
 const useStore = createDuet('TripBudget', {
