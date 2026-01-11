@@ -1,6 +1,6 @@
 {
   "name": "duet-kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "LLM-native UI toolkit - Build UIs where humans and AI edit the same validated state. Built on Zustand + Zod.",
   "type": "module",
   "main": "./dist/index.js",
